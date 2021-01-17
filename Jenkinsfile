@@ -16,7 +16,7 @@ node('master') {
 	}
 	
 	stage ('Deployment'){
-		sh 'cp target/*.war /opt/tomcat/webapps'
+		sh 'sudo cp target/*.war /opt/tomcat/webapps'
 	}
 	stage ('Notification'){
 		//slackSend color: 'good', message: 'Deployment Sucessful'
